@@ -1,0 +1,103 @@
+\begin{thebibliography}{10}
+
+\bibitem{abadi2016tensorflow}
+Mart{\'\i}n Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey
+  Dean, Matthieu Devin, Sanjay Ghemawat, Geoffrey Irving, Michael Isard, et~al.
+\newblock Tensorflow: A system for large-scale machine learning.
+\newblock In {\em 12th {USENIX} Symposium on Operating Systems Design and
+  Implementation ({OSDI})}, pages 265--283, 2016.
+
+\bibitem{choi2016doctor}
+Edward Choi, Mohammad~Taha Bahadori, Andy Schuetz, Walter~F Stewart, and Jimeng
+  Sun.
+\newblock Doctor ai: Predicting clinical events via recurrent neural networks.
+\newblock In {\em Machine Learning for Healthcare Conference}, pages 301--318.
+  PMLR, 2016.
+
+\bibitem{devlin2018bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock {\em arXiv preprint arXiv:1810.04805}, 2018.
+
+\bibitem{hamoud2018clinical}
+Alaa Hamoud, Ali~Salah Hashim, and Wid~Akeel Awadh.
+\newblock Clinical data warehouse: a review.
+\newblock {\em Iraqi Journal for Computers and Informatics}, 44(2), 2018.
+
+\bibitem{holzinger2017we}
+Andreas Holzinger, Chris Biemann, Constantinos~S Pattichis, and Douglas~B Kell.
+\newblock What do we need to build explainable ai systems for the medical
+  domain?
+\newblock {\em arXiv preprint arXiv:1712.09923}, 2017.
+
+\bibitem{johnson2016mimic}
+Alistair~EW Johnson, Tom~J Pollard, Lu~Shen, Li-wei~H Lehman, Mengling Feng,
+  Mohammad Ghassemi, Benjamin Moody, Peter Szolovits, Leo~Anthony Celi, and
+  Roger~G Mark.
+\newblock Mimic-iii, a freely accessible critical care database.
+\newblock {\em Scientific data}, 3(1):1--9, 2016.
+
+\bibitem{lecun2015deep}
+Yann LeCun, Yoshua Bengio, and Geoffrey Hinton.
+\newblock Deep learning.
+\newblock {\em nature}, 521(7553):436--444, 2015.
+
+\bibitem{li2020behrt}
+Itian Li, Sebastian Raschka, Jimeng Sun, Lane~R Waitman, and Alex E~W Johnson.
+\newblock Behrt: Transformer for electronic health records.
+\newblock {\em Scientific Reports}, 10(1):7155, 2020.
+
+\bibitem{litjens2017survey}
+Geert Litjens, Thijs Kooi, Babak~Ehteshami Bejnordi, Arnaud Arindra~Adiyoso
+  Setio, Francesco Ciompi, Mohsen Ghafoorian, Jeroen~AWM van~der Laak, Bram van
+  Ginneken, and Clara~I Sanchez.
+\newblock A survey on deep learning in medical image analysis.
+\newblock {\em Medical Image Analysis}, 42:60--88, 2017.
+
+\bibitem{miotto2018deep}
+Riccardo Miotto, Fei Wang, Shuang Wang, Xiaoqian Jiang, and Joel~T Dudley.
+\newblock Deep learning for healthcare: review, opportunities and challenges.
+\newblock {\em Briefings in Bioinformatics}, 19(6):1236--1246, 2018.
+
+\bibitem{paszke2019pytorch}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et~al.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  8024--8035, 2019.
+
+\bibitem{10.1145/3234150}
+Samira Pouyanfar, Saad Sadiq, Yilin Yan, Haiman Tian, Yudong Tao, Maria~Presa
+  Reyes, Mei-Ling Shyu, Shu-Ching Chen, and S.~S. Iyengar.
+\newblock A survey on deep learning: Algorithms, techniques, and applications.
+\newblock {\em ACM Comput. Surv.}, 51(5), September 2018.
+
+\bibitem{rieke2020future}
+Nicola Rieke, Jonathon Hancox, Wenqi Li, Fausto Milletari, Holger~R Roth, Shadi
+  Albarqouni, Spyridon Bakas, Mathieu~Nicolas Galtier, Bennett Landman, Klaus~H
+  Maier-Hein, et~al.
+\newblock The future of digital health with federated learning.
+\newblock {\em npj Digital Medicine}, 3(1):1--7, 2020.
+
+\bibitem{shickel2017deep}
+Benjamin Shickel, Patrick~J Tighe, Azra Bihorac, and Parisa Rashidi.
+\newblock Deep ehr: A survey of recent advances in deep learning techniques for
+  electronic health record (ehr) analysis.
+\newblock {\em IEEE Journal of Biomedical and Health Informatics},
+  22(5):1589--1604, 2017.
+
+\bibitem{silva2024github}
+Alex Silva.
+\newblock Deep\_learning\_clinical\_data.
+\newblock \url{https://github.com/AlexSilvaa9/Deep\_learning\_clinical\_data},
+  2024.
+\newblock Último acceso: 1 octubre 2024.
+
+\bibitem{8787233}
+Ying Yu, Min Li, Liangliang Liu, Yaohang Li, and Jianxin Wang.
+\newblock Clinical big data and deep learning: Applications, challenges, and
+  future outlooks.
+\newblock {\em Big Data Mining and Analytics}, 2(4):288--305, 2019.
+
+\end{thebibliography}

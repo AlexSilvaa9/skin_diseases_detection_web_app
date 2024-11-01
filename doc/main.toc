@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{}%
+\contentsline {section}{\numberline {2}Definición y Relevancia}{2}{}%
+\contentsline {subsection}{\numberline {2.1}¿Qué es el Deep Learning?}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Relación con los Almacenes de Datos}{2}{}%
+\contentsline {section}{\numberline {3}Estado del Arte en Deep Learning para Datos Clínicos}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Tecnologías y Frameworks Actuales}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Modelos Clave en Deep Learning para Datos Clínicos}{3}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Redes Neuronales Convolucionales (CNNs)}{3}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Redes Neuronales Recurrentes (RNNs)}{3}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Transformers}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Avances Recientes en Almacenes de Datos Clínicos para Deep Learning}{4}{}%
+\contentsline {subsection}{\numberline {3.4}Síntesis del Estado del Arte}{4}{}%
+\contentsline {section}{\numberline {4}Metodología y Ejemplos de Uso}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Aplicación del Deep Learning a los Datos Clínicos}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Estudio de Caso: Modelo Predictivo para Diagnóstico de Enfermedades}{4}{}%
+\contentsline {section}{\numberline {5}Desafíos y Direcciones Futuras}{4}{}%
+\contentsline {section}{\numberline {6}Conclusión}{5}{}%
+\contentsline {section}{\numberline {7}Acceso al Repositorio}{6}{}%

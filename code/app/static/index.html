@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Skin Disease Detection</h1>
+        
+        <div id="videoContainer">
+            <video id="videoElement" autoplay></video>
+            <canvas id="overlayCanvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <label for="cameraSelect">Select Camera:</label>
+            <select id="cameraSelect"></select>
+        </div>
+
+        <button id="startButton">Start Detection</button>
+        
+        <div id="messages"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: rgba(224, 224, 224, 0.9); /* Texto claro con transparencia */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.9); /* Título claro */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#videoContainer {
+    position: relative;
+    margin: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    overflow: hidden; /* Para redondear el video y el canvas */
+}
+
+#videoElement, #overlayCanvas {
+    width: 100%;
+    border-radius: 12px;
+}
+
+#overlayCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+label {
+    font-weight: bold;
+    color: rgba(224, 224, 224, 0.8); /* Etiquetas con transparencia */
+}
+
+#cameraSelect {
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Borde claro con transparencia */
+    border-radius: 4px;
+    background: rgba(30, 30, 30, 0.8); /* Fondo oscuro del selector */
+    color: rgba(224, 224, 224, 0.9); /* Texto claro */
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#cameraSelect:focus {
+    border-color: rgba(255, 255, 255, 1); /* Color al enfocar */
+    outline: none;
+}
+
+#startButton {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo del botón con transparencia */
+    color: rgba(255, 255, 255, 0.9); /* Texto del botón claro */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+#startButton:hover {
+    background: rgba(255, 255, 255, 0.4); /* Fondo del botón al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+#messages {
+    color: rgba(255, 82, 82, 0.9); /* Mensajes de error en rojo */
+    margin-top: 20px;
+    font-weight: bold;
+}
