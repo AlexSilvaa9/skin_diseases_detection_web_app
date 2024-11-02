@@ -12,8 +12,7 @@
 \contentsline {subsection}{\numberline {3.3}Avances Recientes en Almacenes de Datos Clínicos para Deep Learning}{4}{}%
 \contentsline {subsection}{\numberline {3.4}Síntesis del Estado del Arte}{4}{}%
 \contentsline {section}{\numberline {4}Metodología y Ejemplos de Uso}{4}{}%
-\contentsline {subsection}{\numberline {4.1}Aplicación del Deep Learning a los Datos Clínicos}{4}{}%
-\contentsline {subsection}{\numberline {4.2}Estudio de Caso: Modelo Predictivo para Diagnóstico de Enfermedades}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Entrenamiento de CNN}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Aplicación Web}{5}{}%
 \contentsline {section}{\numberline {5}Desafíos y Direcciones Futuras}{5}{}%
-\contentsline {section}{\numberline {6}Conclusión}{6}{}%
-\contentsline {section}{\numberline {7}Acceso al Repositorio}{7}{}%
+\contentsline {section}{\numberline {6}Acceso al Repositorio}{7}{}%

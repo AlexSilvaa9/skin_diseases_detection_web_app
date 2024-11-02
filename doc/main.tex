@@ -13,7 +13,9 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{url}
-
+\usepackage{tcolorbox}
+\usepackage{fancybox} % Paquete para añadir sombras
+\usepackage{subcaption}
 \definecolor{codegreen}{HTML}{5AB2FF}
 \definecolor{morado}{HTML}{AD88C6}
 \definecolor{BG}{HTML}{EEEEEE}
@@ -106,10 +108,14 @@ Los avances en deep learning han impulsado mejoras significativas en diversas á
 En particular, las redes neuronales convolucionales (CNN) han demostrado un rendimiento excepcional en tareas relacionadas con imágenes y videos, mientras que las redes neuronales recurrentes (RNN) son adecuadas para el procesamiento de datos secuenciales, como el texto y el habla. Estos enfoques han llevado a la creación de sistemas más robustos y precisos en el análisis y la interpretación de grandes volúmenes de datos.
 \cite{10.1145/3234150}
 
+
 \subsection{Relación con los Almacenes de Datos}
 
-El uso de un data warehouse es fundamental en el análisis de datos clínicos, ya que permite la integración y consolidación de grandes volúmenes de información provenientes de diversas fuentes, como historiales médicos, registros de laboratorio y datos de ensayos clínicos. Esta centralización de datos facilita el acceso a información coherente y de alta calidad, lo que es esencial para llevar a cabo análisis estadísticos y la implementación de técnicas de aprendizaje automático. Al proporcionar una estructura organizada y optimizada para la consulta de datos, un data warehouse no solo mejora la eficiencia de los procesos analíticos, sino que también permite a los investigadores y profesionales de la salud identificar patrones, tendencias y correlaciones en los datos clínicos que pueden ser cruciales para la toma de decisiones informadas en el ámbito de la medicina. En este contexto, el data warehouse se convierte en una herramienta indispensable para la mejora de la atención sanitaria y el avance de la investigación clínica.\cite{hamoud2018clinical}
+El uso de un data warehouse es fundamental en el contexto de deep learning y en la gestión de datos clínicos, ya que facilita la integración, organización y consolidación de grandes volúmenes de información provenientes de diversas fuentes. Estas fuentes pueden incluir historiales médicos, registros de laboratorio, datos de ensayos clínicos, entre otros. La estructura de un data warehouse está optimizada para la consulta de datos de forma eficiente, proporcionando un acceso rápido a información coherente y de alta calidad.
 
+Al centralizar la información en un solo repositorio, los data warehouses no solo mejoran la eficiencia de los procesos analíticos, sino que también permiten a los investigadores y profesionales de la salud identificar patrones, tendencias y correlaciones en los datos clínicos. Esta capacidad de análisis es crucial para la toma de decisiones informadas en el ámbito de la medicina, donde cada decisión puede tener un impacto significativo en la salud del paciente. Por ejemplo, mediante el análisis de los datos almacenados en un data warehouse, es posible predecir complicaciones en pacientes de riesgo, optimizar tratamientos o incluso identificar nuevos enfoques terapéuticos basados en patrones ocultos en los datos.
+
+El data warehouse se convierte en una herramienta indispensable para la mejora de la atención sanitaria y el avance de la investigación clínica, ya que permite integrar y analizar datos heterogéneos de manera eficiente. Además, la integración de técnicas de deep learning con data warehouses habilita aplicaciones avanzadas de aprendizaje automático en el contexto clínico. Los modelos de deep learning entrenados con datos de alta calidad pueden ayudar en la clasificación de enfermedades, la predicción de diagnósticos y la personalización de tratamientos, contribuyendo así a un enfoque más preciso y personalizado de la atención médica. \cite{hamoud2018clinical}
 
 \section{Estado del Arte en Deep Learning para Datos Clínicos}
 \label{sec:estado_del_arte}
@@ -151,23 +157,11 @@ El estado del arte en deep learning aplicado a datos clínicos refleja un progre
 \section{Metodología y Ejemplos de Uso}
 \label{sec:metodologia_ejemplos}
 
-\subsection{Aplicación del Deep Learning a los Datos Clínicos}
-La aplicación de técnicas de deep learning en datos clínicos se ha convertido en un área de gran interés debido a su potencial para transformar la atención médica. En general, el proceso puede describirse en varias etapas fundamentales:
+Se implementó una aplicación web que implementa un modelo de deep learning para el diagnóstico de enfermedades dermatológicas, centrado en la clasificación de imágenes de lesiones cutáneas. A continuación, se detallan las fases del proceso:
 
-\begin{enumerate}
-	\item \textbf{Recolección de Datos:} Se requiere una amplia variedad de datos clínicos, que pueden incluir imágenes médicas, registros de pacientes y resultados de pruebas diagnósticas. La calidad y la cantidad de estos datos son cruciales para el éxito del modelo \cite{litjens2017survey}.
-	
-	\item \textbf{Preprocesamiento de Datos:} Antes de entrenar un modelo, los datos deben ser limpiados y preparados. Esto incluye la normalización de los datos, la eliminación de valores atípicos y el tratamiento de datos faltantes. Para las imágenes, se aplican técnicas de aumento para diversificar el conjunto de datos y mejorar la robustez del modelo \cite{miotto2018deep}.
-	
-	\item \textbf{Entrenamiento del Modelo:} Se seleccionan arquitecturas de red neuronal adecuadas y se entrena el modelo utilizando los datos preprocesados. Durante esta fase, se ajustan los hiperparámetros y se utilizan técnicas como la regularización para evitar el sobreajuste \cite{hamoud2018clinical}.
-	
-	\item \textbf{Evaluación del Modelo:} Después del entrenamiento, se evalúa el rendimiento del modelo utilizando métricas específicas, como precisión, recall y F1-score. Esta etapa es esencial para determinar la efectividad del modelo en la práctica clínica \cite{esteva2017dermatologist}.
-	
-	\item \textbf{Implementación y Monitoreo:} Una vez que el modelo ha demostrado ser efectivo, se implementa en entornos clínicos reales, donde se monitorea continuamente su desempeño y se realizan ajustes según sea necesario \cite{shickel2017deep}.
-\end{enumerate}
 
-\subsection{Estudio de Caso: Modelo Predictivo para Diagnóstico de Enfermedades}
-En este estudio de caso, se implementa un modelo de deep learning para el diagnóstico de enfermedades dermatológicas, centrado en la clasificación de imágenes de lesiones cutáneas. A continuación, se detallan las fases del proceso:
+\subsection{Entrenamiento de CNN}
+
 
 \begin{enumerate}
 	\item \textbf{Preparación de Datos:} El primer paso consiste en descargar el conjunto de datos desde la API de Kaggle \cite{kaggle_api}, que contiene imágenes y metadatos relevantes sobre diversas condiciones dermatológicas, concretamente el conjunto de datos Human Against Machine with 10000 (HAM10000) \cite{taha2018ham10000} que es una colección de imágenes dermatoscópicas que se utiliza para la clasificación de diferentes tipos de cáncer de piel. 
@@ -185,11 +179,33 @@ En este estudio de caso, se implementa un modelo de deep learning para el diagn�
 	\item \textbf{Evaluación y Ajuste del Modelo:} Tras el entrenamiento, se evalúa el modelo en el conjunto de validación utilizando métricas como precisión y pérdida. Además, se generan matrices de confusión para analizar el rendimiento en cada clase. Se ajustan los umbrales de decisión, particularmente para la clase de lunares, para minimizar los falsos positivos, asegurando así que el modelo sea más confiable en la identificación de esta condición crítica \cite{esteva2017dermatologist}.
 \end{enumerate}
 
-Este enfoque metodológico proporciona un marco robusto para aplicar deep learning en el diagnóstico de enfermedades dermatológicas, facilitando una detección más precisa y oportuna que puede mejorar los resultados de salud de los pacientes \cite{miotto2018deep}.
+\subsection{Aplicación Web}
 
+La aplicación web fue desarrollada utilizando el framework de Python, FastAPI, y se implementaron dos endpoints principales para la interacción con el modelo y el usuario.
 
+\begin{itemize}
+	\item \textbf{Endpoint raíz:} Este endpoint sirve los archivos estáticos que verá el usuario, incluyendo el HTML, CSS y JavaScript necesarios para abrir la cámara del dispositivo y capturar una imagen. La interfaz (Figura \ref{fig:app_interface}) permite al usuario capturar la imagen que se enviará al modelo de diagnóstico y muestra tanto las imágenes procesadas como los resultados de la predicción de enfermedades dermatológicas.
+	
+	\item \textbf{Endpoint de Procesamiento de Fotogramas (/video\_frame/):} Este endpoint recibe un fotograma, lo pasa por el modelo de detección de enfermedades y devuelve la respuesta con el diagnóstico. Se implementaron certificados SSL autofirmados para que la aplicación pueda acceder a la cámara del dispositivo en navegadores web, lo cual es especialmente importante para asegurar la privacidad y confidencialidad de los datos.
+\end{itemize}
 
-
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\shadowbox{\includegraphics[width=\textwidth]{images/app1.jpeg}}
+		\caption{Cámara de la app}
+	\end{subfigure}%
+	\hspace{0.05\textwidth}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\shadowbox{\includegraphics[width=\textwidth]{images/app2.jpeg}}
+		\caption{Galería de la app}
+	\end{subfigure}
+	\caption{Interfaz de la aplicación: acceso a la cámara y galería}
+	\label{fig:app_interface}
+\end{figure}
+Esta aplicación es multiplataforma gracias a su naturaleza web, permitiendo su uso en diferentes dispositivos sin necesidad de instalaciones adicionales. La implementación de FastAPI facilita el procesamiento eficiente y seguro de las imágenes, lo que permite al usuario recibir un diagnóstico casi en tiempo real en cualquier dispositivo con acceso a internet y cámara.
 \section{Desafíos y Direcciones Futuras}
 
 A pesar de los avances significativos en el uso de deep learning para datos clínicos, todavía existen desafíos clave que limitan la implementación generalizada de estas tecnologías en entornos de salud. Uno de los problemas más importantes es la calidad y disponibilidad de los datos clínicos. La variabilidad en los sistemas de registros electrónicos de salud y la falta de interoperabilidad entre diferentes plataformas dificultan la integración de datos de múltiples fuentes, lo cual es crucial para entrenar modelos robustos y generalizables \cite{johnson2016mimic}.
@@ -200,9 +216,6 @@ Asimismo, el área de privacidad y seguridad de los datos sigue siendo una preoc
 
 En el futuro, es probable que el desarrollo de herramientas que combinen múltiples tipos de datos clínicos y la aplicación de enfoques multimodales amplíen las capacidades del deep learning en el campo de la salud. Estos enfoques podrían mejorar la precisión y el alcance de los modelos, ofreciendo aplicaciones que vayan desde la detección temprana de enfermedades hasta la personalización de tratamientos.
 
-
-\section{Conclusión}
-Resumen de los principales hallazgos del informe, enfatizando la importancia del deep learning en los datos clínicos y el papel de apoyo de las estructuras de almacenes de datos en la habilitación de estos modelos.
 
 \newpage
 \section{Acceso al Repositorio}
