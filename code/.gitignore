@@ -3,6 +3,3 @@ selfsigned.key
 selfsigned.crt
 .venv
 __pycache__
-yolo_model.py  
-yolov3.cfg  
-yolov3.weights

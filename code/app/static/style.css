@@ -1,25 +1,28 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fondo oscuro */
-    color: rgba(224, 224, 224, 0.9); /* Texto claro con transparencia */
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #121212;
+    color: rgba(224, 224, 224, 0.9);
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
 }
 
 .wrapper {
     text-align: center;
-    max-width: 600px;
-    width: 100%;
+    justify-content: center;
+    width: 70%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    position: relative; 
 }
 
-h1 {
-    color: rgba(255, 255, 255, 0.9); /* Título claro */
-    margin-bottom: 20px;
+h1, h2 {
+    color: rgba(255, 255, 255, 0.9);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 70px; /* Añadir margen superior para evitar superposición */
 }
 
 #videoContainer {
@@ -27,64 +30,114 @@ h1 {
     margin: 20px 0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
     border-radius: 12px;
-    overflow: hidden; /* Para redondear el video y el canvas */
+    overflow: hidden;
+    width: 100%; 
+    max-width: 600px; 
 }
 
-#videoElement, #overlayCanvas {
+#videoElement {
     width: 100%;
+    height: auto; 
     border-radius: 12px;
 }
 
-#overlayCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .controls {
-    margin: 20px 0;
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    display: flex; 
+    align-items: center; 
 }
 
 label {
     font-weight: bold;
-    color: rgba(224, 224, 224, 0.8); /* Etiquetas con transparencia */
+    color: rgba(224, 224, 224, 0.8);
+    margin-right: 10px; 
 }
 
-#cameraSelect {
+button, #cameraSelect, #analyzeButton, #downloadButton {
+    display: block;
+    margin: 20px auto;
     padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.6); /* Borde claro con transparencia */
-    border-radius: 4px;
-    background: rgba(30, 30, 30, 0.8); /* Fondo oscuro del selector */
-    color: rgba(224, 224, 224, 0.9); /* Texto claro */
-    width: 100%;
-    max-width: 300px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-#cameraSelect:focus {
-    border-color: rgba(255, 255, 255, 1); /* Color al enfocar */
-    outline: none;
-}
-
-#startButton {
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.2); /* Fondo del botón con transparencia */
-    color: rgba(255, 255, 255, 0.9); /* Texto del botón claro */
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(50, 50, 50, 0.8));
+    color: rgba(224, 224, 224, 0.9);
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    margin-top: 20px;
-}
-
-#startButton:hover {
-    background: rgba(255, 255, 255, 0.4); /* Fondo del botón al pasar el ratón */
-    transform: translateY(-2px);
-}
-
-#messages {
-    color: rgba(255, 82, 82, 0.9); /* Mensajes de error en rojo */
-    margin-top: 20px;
     font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, #cameraSelect:hover, #analyzeButton:hover, #downloadButton:hover {
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.9), rgba(70, 70, 70, 0.9));
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+button:active, #cameraSelect:active, #analyzeButton:active, #downloadButton:active {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(40, 40, 40, 0.9));
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#gallery img {
+    width: 100px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.documentation {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.documentation h2 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.documentation p {
+    color: rgba(224, 224, 224, 0.9);
 }

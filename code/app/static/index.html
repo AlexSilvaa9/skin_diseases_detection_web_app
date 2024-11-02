@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin Disease Detection</title>
+    <title>Detección de Enfermedades de la Piel</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <div class="controls">
+        <label for="cameraSelect">Selecciona Cámara:</label>
+        <select id="cameraSelect"></select>
+    </div>
     <div class="wrapper">
-        <h1>Skin Disease Detection</h1>
+       
+
+        <h1>Detección de Enfermedades de la Piel</h1>
         
         <div id="videoContainer">
-            <video id="videoElement" autoplay></video>
-            <canvas id="overlayCanvas"></canvas>
+            <video id="videoElement" autoplay playsinline></video>
         </div>
 
-        <div class="controls">
-            <label for="cameraSelect">Select Camera:</label>
-            <select id="cameraSelect"></select>
-        </div>
-
-        <button id="startButton">Start Detection</button>
-        
+        <button id="analyzeButton">Analizar</button>
         <div id="messages"></div>
+
+        <h2>Galería de Capturas</h2>
+        <div id="gallery"></div>
+
+        <div class="documentation">
+            <h2>Información Importante</h2>
+            <p>
+                Esta aplicación utiliza un modelo preentrenado de MobileNet para detectar posibles enfermedades de la piel en las imágenes capturadas. Sin embargo, es importante tener en cuenta que este modelo no es un sustituto de un diagnóstico médico profesional.
+            </p>
+            <p>
+                Si observas algo inusual en la detección, como lesiones o cambios en la piel, te recomendamos que consultes a un médico especialista para una evaluación adecuada. No se debe considerar esta aplicación como una herramienta de diagnóstico final.
+            </p>
+            <p>
+                Además, asegúrate de mantener un seguimiento regular con tu dermatólogo y seguir sus recomendaciones para el cuidado de la piel.
+            </p>
+            <p>
+                El uso de esta aplicación es bajo tu propio riesgo. Ni los desarrolladores ni los operadores se hacen responsables por cualquier error de diagnóstico o consecuencias que puedan surgir de su uso.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span id="closeModal" class="close">&times;</span>
+        <img id="modalImage" class="modal-content">
+        <a id="downloadButton" download="capture.jpg">Descargar</a>
     </div>
 
     <script src="/static/script.js"></script>
