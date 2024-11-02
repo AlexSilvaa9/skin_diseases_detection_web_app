@@ -22,7 +22,7 @@ sudo apt install python3 python3-pip openssl
 
    ```bash
    git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_REPOSITORIO>
+   cd <NOMBRE_DEL_REPOSITORIO/code>
    ```
 
 2. **Dale permisos de ejecución al script de configuración**

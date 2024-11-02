@@ -25,4 +25,4 @@ fi
 
 echo "Configuración completa."
 echo "Para activar el entorno virtual, usa 'source .venv/bin/activate'."
-echo "Para iniciar la aplicación, ejecuta 'python app/main.py'."
+echo "Para iniciar la aplicación, ejecuta 'uvicorn app.main:app --host 0.0.0.0 --port 8000 --ssl-keyfile=selfsigned.key --ssl-certfile=selfsigned.crt'."
