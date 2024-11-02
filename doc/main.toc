@@ -14,5 +14,5 @@
 \contentsline {section}{\numberline {4}Metodología y Ejemplos de Uso}{4}{}%
 \contentsline {subsection}{\numberline {4.1}Entrenamiento de CNN}{4}{}%
 \contentsline {subsection}{\numberline {4.2}Aplicación Web}{5}{}%
-\contentsline {section}{\numberline {5}Desafíos y Direcciones Futuras}{5}{}%
-\contentsline {section}{\numberline {6}Acceso al Repositorio}{7}{}%
+\contentsline {section}{\numberline {5}Desafíos y Direcciones Futuras}{6}{}%
+\contentsline {section}{\numberline {6}Acceso al Repositorio}{8}{}%
