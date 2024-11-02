@@ -3,44 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bibli.bib
-You've used 16 entries,
+Repeated entry---line 185 of file bibli.bib
+ : @article{lecun2015deep
+ :                       ,
+I'm skipping whatever remains of this entry
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            598 strings with 7887 characters,
-and the built_in function-call counts, 7315 in all, are:
-= -- 669
-> -- 547
+            617 strings with 8394 characters,
+and the built_in function-call counts, 8469 in all, are:
+= -- 780
+> -- 613
 < -- 3
-+ -- 219
-- -- 200
-* -- 623
-:= -- 1262
-add.period$ -- 50
-call.type$ -- 16
-change.case$ -- 145
++ -- 245
+- -- 222
+* -- 697
+:= -- 1468
+add.period$ -- 63
+call.type$ -- 20
+change.case$ -- 168
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 206
-empty$ -- 425
-format.name$ -- 200
-if$ -- 1446
+cite$ -- 20
+duplicate$ -- 244
+empty$ -- 508
+format.name$ -- 222
+if$ -- 1678
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 15
-newline$ -- 84
-num.names$ -- 32
-pop$ -- 138
+int.to.str$ -- 20
+missing$ -- 18
+newline$ -- 105
+num.names$ -- 40
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 129
+purify$ -- 148
 quote$ -- 0
-skip$ -- 155
+skip$ -- 183
 stack$ -- 0
-substring$ -- 352
-swap$ -- 48
+substring$ -- 397
+swap$ -- 52
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
+type$ -- 80
 warning$ -- 0
-while$ -- 55
-width$ -- 18
-write$ -- 178
+while$ -- 65
+width$ -- 22
+write$ -- 221
+(There was 1 error message)

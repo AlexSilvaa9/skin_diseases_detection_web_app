@@ -52,6 +52,7 @@
 	captionpos=b,
 }
 
+
 \begin{document}
 
 
@@ -149,11 +150,45 @@ El estado del arte en deep learning aplicado a datos clínicos refleja un progre
 
 \section{Metodología y Ejemplos de Uso}
 \label{sec:metodologia_ejemplos}
+
 \subsection{Aplicación del Deep Learning a los Datos Clínicos}
-Descripción paso a paso del proceso de uso de modelos de deep learning con datos clínicos, desde la recolección y preprocesamiento de datos hasta el entrenamiento y evaluación del modelo.
+La aplicación de técnicas de deep learning en datos clínicos se ha convertido en un área de gran interés debido a su potencial para transformar la atención médica. En general, el proceso puede describirse en varias etapas fundamentales:
+
+\begin{enumerate}
+	\item \textbf{Recolección de Datos:} Se requiere una amplia variedad de datos clínicos, que pueden incluir imágenes médicas, registros de pacientes y resultados de pruebas diagnósticas. La calidad y la cantidad de estos datos son cruciales para el éxito del modelo \cite{litjens2017survey}.
+	
+	\item \textbf{Preprocesamiento de Datos:} Antes de entrenar un modelo, los datos deben ser limpiados y preparados. Esto incluye la normalización de los datos, la eliminación de valores atípicos y el tratamiento de datos faltantes. Para las imágenes, se aplican técnicas de aumento para diversificar el conjunto de datos y mejorar la robustez del modelo \cite{miotto2018deep}.
+	
+	\item \textbf{Entrenamiento del Modelo:} Se seleccionan arquitecturas de red neuronal adecuadas y se entrena el modelo utilizando los datos preprocesados. Durante esta fase, se ajustan los hiperparámetros y se utilizan técnicas como la regularización para evitar el sobreajuste \cite{hamoud2018clinical}.
+	
+	\item \textbf{Evaluación del Modelo:} Después del entrenamiento, se evalúa el rendimiento del modelo utilizando métricas específicas, como precisión, recall y F1-score. Esta etapa es esencial para determinar la efectividad del modelo en la práctica clínica \cite{esteva2017dermatologist}.
+	
+	\item \textbf{Implementación y Monitoreo:} Una vez que el modelo ha demostrado ser efectivo, se implementa en entornos clínicos reales, donde se monitorea continuamente su desempeño y se realizan ajustes según sea necesario \cite{shickel2017deep}.
+\end{enumerate}
 
 \subsection{Estudio de Caso: Modelo Predictivo para Diagnóstico de Enfermedades}
-Proporciona un ejemplo utilizando un modelo de deep learning para predecir enfermedades basado en datos clínicos. Describe las fases de preparación de datos, entrenamiento y evaluación del modelo. Si es posible, incluye un fragmento breve de código o pseudocódigo.
+En este estudio de caso, se implementa un modelo de deep learning para el diagnóstico de enfermedades dermatológicas, centrado en la clasificación de imágenes de lesiones cutáneas. A continuación, se detallan las fases del proceso:
+
+\begin{enumerate}
+	\item \textbf{Preparación de Datos:} El primer paso consiste en descargar el conjunto de datos desde la API de Kaggle \cite{kaggle_api}, que contiene imágenes y metadatos relevantes sobre diversas condiciones dermatológicas, concretamente el conjunto de datos Human Against Machine with 10000 (HAM10000) \cite{taha2018ham10000} que es una colección de imágenes dermatoscópicas que se utiliza para la clasificación de diferentes tipos de cáncer de piel. 
+	
+	Se realiza un análisis inicial de los datos para identificar el desequilibrio en las clases. En este caso, se observa que la clase de lunares ('nv') tiene una cantidad significativamente mayor de imágenes en comparación con otras clases. Para abordar este problema, se decide reducir el número de imágenes de lunares a un 40\% de su cantidad original, asegurando así un mejor equilibrio en el conjunto de datos .
+	
+	\item \textbf{División de Datos:} Una vez que los datos se han equilibrado, se procede a dividir el conjunto en datos de entrenamiento y de validación. Se utiliza una proporción del 80\% de los datos para el entrenamiento y el 20\% restante para la validación. Esto garantiza que el modelo sea capaz de generalizar a nuevos datos y no se limite a memorizar el conjunto de entrenamiento.
+	
+	\item \textbf{Generación de Datos:} Para mejorar la capacidad del modelo para generalizar, se implementan generadores de datos que aplican técnicas de aumento de imágenes, como rotaciones, escalados y cambios de brillo. Esto no solo aumenta la cantidad de datos disponibles para el entrenamiento, sino que también ayuda a simular variaciones que el modelo puede encontrar en situaciones del mundo real.
+	
+	\item \textbf{Entrenamiento del Modelo:} Se utilizó MobileNetV2 \cite{mobilenetv2}, un modelo preentrenado en la base de datos ImageNet, lo que permitió aprovechar características previamente aprendidas para mejorar la precisión en la clasificación de imágenes de piel. 
+	
+	El entrenamiento se llevó a cabo con TensorFlow \cite{abadi2016tensorflow}, donde se implementaron técnicas de Dropout y Early Stopping para mitigar el riesgo de sobreajuste. El Dropout se utilizó para desactivar aleatoriamente un porcentaje de neuronas durante el entrenamiento, promoviendo la generalización del modelo. Por otro lado, el Early Stopping supervisó la precisión en el conjunto de validación y detuvo el entrenamiento automáticamente cuando no se observaron mejoras durante un número definido de épocas. Además, se congelaron las capas iniciales de MobileNetV2, permitiendo que las capas superiores se ajustaran finamente a los datos específicos del problema. Esta estrategia resultó en un modelo eficiente y robusto para el diagnóstico de enfermedades cutáneas.
+	
+	\item \textbf{Evaluación y Ajuste del Modelo:} Tras el entrenamiento, se evalúa el modelo en el conjunto de validación utilizando métricas como precisión y pérdida. Además, se generan matrices de confusión para analizar el rendimiento en cada clase. Se ajustan los umbrales de decisión, particularmente para la clase de lunares, para minimizar los falsos positivos, asegurando así que el modelo sea más confiable en la identificación de esta condición crítica \cite{esteva2017dermatologist}.
+\end{enumerate}
+
+Este enfoque metodológico proporciona un marco robusto para aplicar deep learning en el diagnóstico de enfermedades dermatológicas, facilitando una detección más precisa y oportuna que puede mejorar los resultados de salud de los pacientes \cite{miotto2018deep}.
+
+
+
 
 \section{Desafíos y Direcciones Futuras}
 
