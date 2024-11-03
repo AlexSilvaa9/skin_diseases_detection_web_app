@@ -35,10 +35,18 @@ def detect_skin_conditions(image, model):
         print("Realizando predicción...")
         predictions = model.predict(preprocessed_image)[0]  # Obtén las predicciones para la imagen
         print(f"Predicciones: {predictions}")
-        results = []
 
         # Define las clases y sus umbrales correspondientes
-        classes = ["akiec", "bcc", "bkl", "df", "mel", "nv", "vasc"]
+        classes = [
+            "akiec: Queratosis actínica o carcinoma de células escamosas ⚠️",
+            "bcc: Carcinoma de células basales ⚠️",
+            "bkl: Léntigo benigno o queratosis seborreica ✅",
+            "df: Dermatofibroma ✅",
+            "mel: Melanoma ⚠️",
+            "nv: Nevus melanocítico ✅",
+            "vasc: Lesión vascular ✅"
+        ]
+
         thresholds = {
             0: 0.08,  # akiec
             1: 0.18,  # bcc
@@ -49,15 +57,24 @@ def detect_skin_conditions(image, model):
             6: 0.05   # vasc
         }
 
-        for i, confidence in enumerate(predictions):
-            # Compara la confianza con el umbral específico de cada clase
-            if confidence > thresholds[i]:
-                results.append({
-                    "class": classes[i],
-                    "confidence": float(confidence)
-                })
+        results = []
 
-        print(f"Resultados de detección: {results}")
+        # Selecciona la clase con la mayor confianza que supere su umbral
+        best_class = None
+        best_confidence = 0.0
+
+        for i, confidence in enumerate(predictions):
+            if confidence > thresholds[i] and confidence > best_confidence:
+                best_class = classes[i]
+                best_confidence = confidence
+
+        if best_class:
+            results.append({
+                "class": best_class,
+                "confidence": float(best_confidence)
+            })
+
+        print(f"Resultado de detección: {results}")
         return results
     except Exception as e:
         print(f"Error en la detección de condiciones de la piel: {e}")
