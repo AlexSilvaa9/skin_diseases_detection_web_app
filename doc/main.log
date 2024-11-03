@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  2 NOV 2024 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  3 NOV 2024 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,38 +527,44 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [1] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
+ [1] [2]
+<images/dataWare.jpg, id=24, 402.92123pt x 220.00778pt>
+File: images/dataWare.jpg Graphic file (type jpg)
+<use images/dataWare.jpg>
+Package pdftex.def Info: images/dataWare.jpg  used on input line 122.
+(pdftex.def)             Requested size: 305.33789pt x 166.72758pt.
+ [3 <./images/dataWare.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
-[4]
-<images/app1.jpeg, id=31, 1037.37563pt x 1432.60219pt>
+[4] [5]
+<images/app1.jpeg, id=35, 1037.37563pt x 1432.60219pt>
 File: images/app1.jpeg Graphic file (type jpg)
 <use images/app1.jpeg>
-Package pdftex.def Info: images/app1.jpeg  used on input line 196.
+Package pdftex.def Info: images/app1.jpeg  used on input line 205.
 (pdftex.def)             Requested size: 211.38832pt x 291.91472pt.
 
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 196--197
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 205--206
  [][] 
  []
 
-<images/app2.jpeg, id=32, 819.8128pt x 1107.38719pt>
+<images/app2.jpeg, id=36, 819.8128pt x 1107.38719pt>
 File: images/app2.jpeg Graphic file (type jpg)
 <use images/app2.jpeg>
-Package pdftex.def Info: images/app2.jpeg  used on input line 202.
+Package pdftex.def Info: images/app2.jpeg  used on input line 211.
 (pdftex.def)             Requested size: 211.38832pt x 285.53136pt.
 
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 202--203
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 211--212
  [][] 
  []
 
-[5] [6 <./images/app1.jpeg> <./images/app2.jpeg>] [7] (./main.bbl
+[6 <./images/app1.jpeg> <./images/app2.jpeg>] [7] (./main.bbl
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
 3.
 
@@ -569,10 +575,10 @@ LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 16561 strings out of 476091
- 324340 string characters out of 5794081
+ 16569 strings out of 476091
+ 324517 string characters out of 5794081
  1860330 words of memory out of 5000000
- 36701 multiletter control sequences out of 15000+600000
+ 36708 multiletter control sequences out of 15000+600000
  522448 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,10n,80p,832b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -586,10 +592,10 @@ m-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
 onts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
 
-Output written on main.pdf (10 pages, 1632441 bytes).
+Output written on main.pdf (10 pages, 1666319 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
